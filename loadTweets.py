@@ -22,7 +22,7 @@ def load_tweets(df,keyword,start_date,radius):
             os.system(command)
 
 def coalate_tweets(states):
-    con = sqlite3.connect("Coalated.db")
+    con = sqlite3.connect("Collated.db")
     cur = con.cursor()
     try:
         cur.execute("CREATE TABLE tweets ( tweet text not null, date text not null, time text not null, state text not null);")
